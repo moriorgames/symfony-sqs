@@ -1,5 +1,7 @@
 
+.env
 .DS_Store
+.phpunit.result.cache
 .idea
 
 ###> symfony/framework-bundle ###
@@ -10,5 +12,3 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-
-.env
