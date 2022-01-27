@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Integration\Handler;
+namespace App\Tests\Integration\Message;
 
 use App\Message\OtherSmsNotification;
 use App\Message\SmsNotification;
