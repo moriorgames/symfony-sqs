@@ -13,9 +13,12 @@ class SmsNotificationHandlerTest extends IntegrationTestCase
         /** @var TraceableMessageBus $busCommand */
         $busCommand = $this->testContainer->get('messenger.default_bus');
 
-        $result = $busCommand->dispatch(new SmsNotification('hello world'));
-        dump($result);
+        $expected = 'My message';
+        $result = $busCommand->dispatch(new SmsNotification($expected));
 
-        $this->assertTrue(true);
+        /** @var SmsNotification $message */
+        $message = $result->getMessage();
+
+        $this->assertEquals($expected, $message->getContent());
     }
 }
