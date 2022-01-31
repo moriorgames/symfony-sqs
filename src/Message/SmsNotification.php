@@ -2,7 +2,7 @@
 
 namespace App\Message;
 
-class SmsNotification implements Notifications
+class SmsNotification
 {
     private $content;
 

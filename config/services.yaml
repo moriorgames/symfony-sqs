@@ -22,3 +22,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    sms_notifications:
+        namespace: App\Message\
+        resource: '%kernel.project_dir%/src/Message/*Handler.php'
+        tags:
+            - { name: messenger.message_handler, bus: messenger.bus.default }
